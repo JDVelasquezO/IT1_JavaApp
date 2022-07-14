@@ -1,5 +1,7 @@
 package com.mycompany.mavenproject1;
 
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -225,6 +227,9 @@ public class FrameCalc extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        FrameCalc dialog = new FrameCalc();
+        dialog.setVisible(true);
+        
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void n1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1ActionPerformed
@@ -242,33 +247,37 @@ public class FrameCalc extends javax.swing.JFrame {
         
         String c = String.valueOf(a + b);
         res.setText(c);
+        JOptionPane.showMessageDialog(null,  "The result of operation "+n1.getText()+" + "+n2.getText()+" is: "+c, "Result",JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // Add:
+        // Division:
         int a = Integer.parseInt(n1.getText());
         int b = Integer.parseInt(n2.getText());
         
         String c = String.valueOf(a / b);
         res.setText(c);
+        JOptionPane.showMessageDialog(null,  "The result of operation "+n1.getText()+" / "+n2.getText()+" is: "+c, "Result",JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // Add:
+        // Substraction:
         int a = Integer.parseInt(n1.getText());
         int b = Integer.parseInt(n2.getText());
         
         String c = String.valueOf(a - b);
         res.setText(c);
+        JOptionPane.showMessageDialog(null,  "The result of operation "+n1.getText()+" - "+n2.getText()+" is: "+c, "Result",JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // Add:
+        // Multiplication:
         int a = Integer.parseInt(n1.getText());
         int b = Integer.parseInt(n2.getText());
         
         String c = String.valueOf(a * b);
         res.setText(c);
+        JOptionPane.showMessageDialog(null,  "The result of operation "+n1.getText()+" * "+n2.getText()+" is: "+c, "Result",JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void resActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resActionPerformed
@@ -276,7 +285,8 @@ public class FrameCalc extends javax.swing.JFrame {
     }//GEN-LAST:event_resActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        //Close
+        System.exit(0);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
